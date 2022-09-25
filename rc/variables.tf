@@ -17,8 +17,8 @@ variable "AWS_REGION" {
 }
 
 variable "APPLICATION_NAME" {
-  default     = "Open592"
-  description = "Application name. (Defaults to 'Open592')"
+  default     = "open592"
+  description = "Application name. (Defaults to 'open592')"
   type        = string
 }
 
