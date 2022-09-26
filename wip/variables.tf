@@ -1,3 +1,26 @@
+variable "ROOT_DOMAIN" {
+  description = "Root domain for the project. (Example: open592.com)"
+  type        = string
+}
+
+variable "APPLICATION_NAME" {
+  default     = "open592"
+  description = "Application name. (Defaults to 'open592')"
+  type        = string
+}
+
+variable "ENVIRONMENT" {
+  default     = "wip"
+  description = "Development environment. (Defaults to 'wip')"
+  type        = string
+}
+
+variable "ENVIRONMENT_DOMAIN" {
+  default     = "${var.ENVIRONMENT}.${var.ROOT_DOMAIN}"
+  description = "Domain name for the environment. (Example: wip.open592.com)"
+  type        = string
+}
+
 variable "AWS_ACCESS_KEY" {
   default     = ""
   description = "Access key for AWS. This should NEVER be stored locally"
@@ -16,14 +39,7 @@ variable "AWS_REGION" {
   type        = string
 }
 
-variable "APPLICATION_NAME" {
-  default     = "open592"
-  description = "Application name. (Defaults to 'Open592')"
-  type        = string
-}
-
-variable "ENVIRONMENT" {
-  default     = "wip"
-  description = "Development environment. (Defaults to 'wip')"
+variable "AWS_HOSTED_ZONE_ID" {
+  description = "The hosted zone ID for the root domain."
   type        = string
 }
