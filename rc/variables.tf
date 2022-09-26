@@ -16,7 +16,6 @@ variable "ENVIRONMENT" {
 }
 
 variable "ENVIRONMENT_DOMAIN" {
-  default     = "${var.ENVIRONMENT}.${var.ROOT_DOMAIN}"
   description = "Domain name for the environment. (Example: rc.open592.com)"
   type        = string
 }
