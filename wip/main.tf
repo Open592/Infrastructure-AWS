@@ -1,5 +1,5 @@
 resource "aws_route53_zone" "wip-zone" {
-  name = data.terraform_remote_state.root_domain.outputs.root_domain
+  name = var.ENVIRONMENT_DOMAIN
 }
 
 resource "aws_route53_record" "wip-ns" {
