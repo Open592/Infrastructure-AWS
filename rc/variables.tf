@@ -1,8 +1,3 @@
-variable "ROOT_DOMAIN" {
-  description = "Root domain for the project. (Example: open592.com)"
-  type        = string
-}
-
 variable "APPLICATION_NAME" {
   default     = "open592"
   description = "Application name. (Defaults to 'open592')"
@@ -35,10 +30,5 @@ variable "AWS_SECRET_KEY" {
 variable "AWS_REGION" {
   default     = "us-west-2"
   description = "AWS region. (Defaults to 'us-west-2')"
-  type        = string
-}
-
-variable "AWS_HOSTED_ZONE_ID" {
-  description = "The hosted zone ID for the root domain."
   type        = string
 }
